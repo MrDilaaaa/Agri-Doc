@@ -1,0 +1,6 @@
+{
+  "name": "IPP",
+  "version": "1.0.0",
+  "main": "./IPP.js",
+  "license": "MIT"
+}

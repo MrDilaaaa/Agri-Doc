@@ -44,7 +44,7 @@ class Dashboard extends React.Component {
     return (
       <div className={s.root}>
         <h1 className="page-title">
-          Dashboard &nbsp;
+          Dashboard One &nbsp;
         </h1>
           <Col lg={6} xl={4} xs={12}>
           </Col>

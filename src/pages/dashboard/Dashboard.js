@@ -1,7 +1,20 @@
 import React from "react";
 import { Row, Col, Progress, Table, Label, Input } from "reactstrap";
 
+import Widget from "../../components/Widget";
+
+import Calendar from "./components/calendar/Calendar";
+import Map from "./components/am4chartMap/am4chartMap";
+import Rickshaw from "./components/rickshaw/Rickshaw";
+
+import AnimateNumber from "react-animated-number";
+
 import s from "./Dashboard.module.scss";
+
+import peopleA1 from "../../assets/people/a1.jpg";
+import peopleA2 from "../../assets/people/a2.jpg";
+import peopleA5 from "../../assets/people/a5.jpg";
+import peopleA4 from "../../assets/people/a4.jpg";
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -44,11 +57,157 @@ class Dashboard extends React.Component {
     return (
       <div className={s.root}>
         <h1 className="page-title">
-          Dashboard One &nbsp;
+          Dashboard &nbsp;
         </h1>
-          <Col lg={6} xl={4} xs={12}>
+
+        <Row>
+
+
+          <Col lg={4}>
+            <Widget
+              className="bg-transparent"
+              settings
+              refresh
+              close
+            >
+              <p>
+                Status:
+              </p>
+              <p>
+                <span className="circle bg-default text-white">
+                  <i className="fa fa-map-marker" />
+                </span>{" "}
+                &nbsp; 146 Countries, 2759 Cities
+              </p>
+              <div className="row progress-stats">
+                <div className="col-md-9 col-12">
+                  <h6 className="name fw-semi-bold">Foreign Visits</h6>
+                  <p className="description deemphasize mb-xs text-white">
+                    Some Cool Text
+                  </p>
+                  <Progress
+                    color="primary"
+                    value="60"
+                    className="bg-subtle-blue progress-xs"
+                  />
+                </div>
+                <div className="col-md-3 col-12 text-center">
+                  <span className="status rounded rounded-lg bg-default text-light">
+                    <small>
+                      <AnimateNumber value={75} />%
+                    </small>
+                  </span>
+                </div>
+              </div>
+              <div className="row progress-stats">
+                <div className="col-md-9 col-12">
+                  <h6 className="name fw-semi-bold">Local Visits</h6>
+                  <p className="description deemphasize mb-xs text-white">
+                    P. to C. Conversion
+                  </p>
+                  <Progress
+                    color="danger"
+                    value="39"
+                    className="bg-subtle-blue progress-xs"
+                  />
+                </div>
+                <div className="col-md-3 col-12 text-center">
+                  <span className="status rounded rounded-lg bg-default text-light">
+                    <small>
+                      <AnimateNumber value={84} />%
+                    </small>
+                  </span>
+                </div>
+              </div>
+              <div className="row progress-stats">
+                <div className="col-md-9 col-12">
+                  <h6 className="name fw-semi-bold">Sound Frequencies</h6>
+                  <p className="description deemphasize mb-xs text-white">
+                    Average Bitrate
+                  </p>
+                  <Progress
+                    color="success"
+                    value="80"
+                    className="bg-subtle-blue progress-xs"
+                  />
+                </div>
+                <div className="col-md-3 col-12 text-center">
+                  <span className="status rounded rounded-lg bg-default text-light">
+                    <small>
+                      <AnimateNumber value={92} />%
+                    </small>
+                  </span>
+                </div>
+              </div>
+            </Widget>
           </Col>
-      </div>
+
+          <Col lg={6} xl={4} xs={12}>
+            <Widget title={<h6> USERBASE GROWTH </h6>} close settings>
+              <div className="stats-row">
+                <div className="stat-item">
+                  <h6 className="name">Overall Growth</h6>
+                  <p className="value">76.38%</p>
+                </div>
+                <div className="stat-item">
+                  <h6 className="name">Montly</h6>
+                  <p className="value">10.38%</p>
+                </div>
+                <div className="stat-item">
+                  <h6 className="name">24h</h6>
+                  <p className="value">3.38%</p>
+                </div>
+              </div>
+              <Progress
+                color="success"
+                value="60"
+                className="bg-subtle-blue progress-xs"
+              />
+              <p>
+                <small>
+                  <span className="circle bg-default text-white mr-2">
+                    <i className="fa fa-chevron-up" />
+                  </span>
+                </small>
+                <span className="fw-semi-bold">&nbsp;17% higher</span>
+                &nbsp;than last month
+              </p>
+            </Widget>
+          </Col>
+          <Col lg={6} xl={4} xs={12}>
+            <Widget title={<h6> TRAFFIC VALUES </h6>} close settings>
+              <div className="stats-row">
+                <div className="stat-item">
+                  <h6 className="name">Overall Values</h6>
+                  <p className="value">17 567 318</p>
+                </div>
+                <div className="stat-item">
+                  <h6 className="name">Montly</h6>
+                  <p className="value">55 120</p>
+                </div>
+                <div className="stat-item">
+                  <h6 className="name">24h</h6>
+                  <p className="value">9 695</p>
+                </div>
+              </div>
+              <Progress
+                color="danger"
+                value="60"
+                className="bg-subtle-blue progress-xs"
+              />
+              <p>
+                <small>
+                  <span className="circle bg-default text-white mr-2">
+                    <i className="fa fa-chevron-down" />
+                  </span>
+                </small>
+                <span className="fw-semi-bold">&nbsp;8% lower</span>
+                &nbsp;than last month
+              </p>
+            </Widget>
+          </Col>
+        </Row>
+      </div >
     );
   }
 }

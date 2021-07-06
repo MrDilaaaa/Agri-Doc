@@ -104,7 +104,7 @@ class Sidebar extends React.Component {
                     <LinksGroup
                         onActiveSidebarItemChange={t => this.props.dispatch(changeActiveSidebarItem(t))}
                         activeItem={this.props.activeItem}
-                        header="IAF"
+                        header="Daily Severity Report"
                         isHeader
                         iconName={<TablesIcon className={s.menuIcon} />}
                         link="/app/IAP"

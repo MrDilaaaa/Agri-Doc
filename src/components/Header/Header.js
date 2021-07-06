@@ -22,7 +22,7 @@ import {
   changeSidebarVisibility,
 } from "../../actions/navigation";
 
-import avatar from "../../assets/people/a7.jpg";
+import avatar from "../../assets/avatar.png";
 
 import s from "./Header.module.scss";
 import "animate.css";

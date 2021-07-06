@@ -113,13 +113,13 @@ class Sidebar extends React.Component {
                     <LinksGroup
                         onActiveSidebarItemChange={activeItem => this.props.dispatch(changeActiveSidebarItem(activeItem))}
                         activeItem={this.props.activeItem}
-                        header="DSP"
+                        header="Session"
                         isHeader
                         iconName={<NotificationsIcon className={s.menuIcon}/>}
                         link="/app/DSP"
                         index="ui"
                     />
-                    <LinksGroup
+                    {/* <LinksGroup
                         onActiveSidebarItemChange={activeItem => this.props.dispatch(changeActiveSidebarItem(activeItem))}
                         activeItem={this.props.activeItem}
                         header="PDR"
@@ -127,7 +127,7 @@ class Sidebar extends React.Component {
                         iconName={<NotificationsIcon className={s.menuIcon}/>}
                         link="/app/PDR"
                         index="ui"
-                    />
+                    /> */}
                 </ul>
             </nav>
         );
